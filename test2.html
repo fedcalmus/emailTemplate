@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Email template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,500,800" rel="stylesheet">
+
+</head>
+<body style="padding: 0;margin: 0;width: 100%; min-width: 100% !important;">
+    <field type="src" name="bgimage" label="Background image" default="http://placehold.it/640x200"></field>
+    <field type="number" name="bgwidth" label="Background width" default="640" hint="this should not include px"></field>
+    <field type="number" name="bgheight" label="Background height" default="200" hint="this should not include px"></field>
+    <table cellspacing="0" cellpadding="0" border="0" width="640" replace-width="{{bgwidth}}">
+        <tr>
+            <td align="center" valign="top" width="600" replace-width="{{bgwidth}}" height="200" replace-height="{{bgheight}}" background="http://placehold.it/640x200" replace-background="{{bgimage}}">
+                <escape><!--[if gte mso 9]><v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:</escape>
+<content replace="{{bgwidth}}" style="display:none;">640</content>
+                <escape>px; height:</escape>
+                <content replace="{{bgheight}}" style="display:none;">200</content>
+                <escape>px; background-position:center;"><v:fill type="frame" src="</escape>
+<content replace="{{bgimage}}" style="display:none;">http://placehold.it/640x200</content>
+                    <escape>" /><v:textbox inset="0,0,0,0"><![endif]--></escape>
+
+                Put your content here
+
+                <escape><!--[if gte mso 9]></v:textbox></v:rect><![endif]--></escape>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
